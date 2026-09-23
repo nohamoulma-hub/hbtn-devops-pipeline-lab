@@ -23,10 +23,10 @@ on:
 permissions:
   contents: read
 
-jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
+  jobs:
+    test:
+      name: Test
+      runs-on: ubuntu-latest
 
     services:
       postgres:

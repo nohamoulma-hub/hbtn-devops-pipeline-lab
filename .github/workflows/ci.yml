@@ -53,10 +53,12 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install ci
+        run: npm ci
 
       - name: Run the unit tests
         run: npm run test:unit
 
       - name: Run the integration tests
+        env:
+          DATABASE_URL: postgres://pipeline:pipeline@localhost:5432/pipeline
         run: npm run test:integration

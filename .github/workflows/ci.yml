@@ -23,10 +23,10 @@ on:
 permissions:
   contents: read
 
-  jobs:
-    test:
-      name: Test
-      runs-on: ubuntu-latest
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
 
     services:
       postgres:
@@ -43,7 +43,7 @@ permissions:
           --health-timeout 5s
           --health-retries 5
 
-     steps:
+    steps:
       - name: Check out the repository
         uses: actions/checkout@v4
 
